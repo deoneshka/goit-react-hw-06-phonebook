@@ -24,8 +24,8 @@ const getVisibleContacts = (allContacts, filter) => {
         name.toLowerCase().includes(normalizedFilter));
 }
 
-const mapStateToProps = ({contacts, filter}) => ({
-    contacts: getVisibleContacts(contacts, filter)
+const mapStateToProps = ({ contacts: { items, filter }}) => ({
+    contacts: getVisibleContacts(items, filter)
 });
 
 const mapDispatchToProps = dispatch => ({
